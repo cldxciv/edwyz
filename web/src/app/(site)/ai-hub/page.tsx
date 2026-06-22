@@ -14,8 +14,8 @@ export default function AiHubPage() {
       <Container className="max-w-2xl text-center">
         <SectionHeading
           eyebrow="AI Innovation Hub"
-          title="Our Claude-powered AI assistant is coming soon"
-          description="We're building an intelligent assistant trained on our services, case studies, and expertise to help you find the right solution faster. In the meantime, our team is happy to talk through your project directly."
+          title="Talk to our Claude-powered AI assistant"
+          description="Our AI assistant is trained on Edwyz's services, case studies, and expertise so it can answer questions and point you to the right solution instantly. Click the chat bubble in the bottom-right corner of any page to start a conversation — or talk to our team directly."
         />
         <div className="mt-10 flex justify-center">
           <Button href="/contact" variant="primary">Talk to Our Team</Button>

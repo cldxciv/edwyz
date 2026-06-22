@@ -95,6 +95,32 @@ export default buildConfig({
       ],
     },
   ],
+  globals: [
+    {
+      slug: "settings",
+      label: "AI Settings",
+      access: {
+        read: ({ req }) => Boolean(req.user),
+      },
+      fields: [
+        {
+          name: "anthropicApiKey",
+          type: "text",
+          label: "Anthropic API Key",
+          admin: {
+            description:
+              "Used by the website's AI chat assistant. Falls back to the ANTHROPIC_API_KEY environment variable if left blank. Get a key at console.anthropic.com.",
+          },
+        },
+        {
+          name: "chatEnabled",
+          type: "checkbox",
+          label: "Enable AI chat assistant on the site",
+          defaultValue: true,
+        },
+      ],
+    },
+  ],
   editor: lexicalEditor({}),
   db: postgresAdapter({
     pool: {

@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk, Sora, Outfit } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { ChatWidget } from "@/components/ChatWidget";
 import { siteConfig } from "@/lib/nav";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <ChatWidget />
       </body>
     </html>
   );
