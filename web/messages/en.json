@@ -1,0 +1,246 @@
+{
+  "Nav": {
+    "services": "Services",
+    "industries": "Industries",
+    "caseStudies": "Case Studies",
+    "about": "About",
+    "blog": "Blog",
+    "careers": "Careers",
+    "scheduleConsultation": "Schedule Consultation"
+  },
+  "Footer": {
+    "services": "Services",
+    "company": "Company",
+    "getInTouch": "Get in touch",
+    "aboutUs": "About Us",
+    "rightsReserved": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "scheduleCta": "Schedule a consultation"
+  },
+  "Home": {
+    "hero": {
+      "eyebrow": "AI · Data · Engineering",
+      "titlePrefix": "Engineering the",
+      "titleHighlight": "Future",
+      "titleSuffix": "with AI, Data & Innovation",
+      "subtitle": "Edwyz partners with enterprises to design, build, and scale intelligent systems — from AI agents to cloud platforms — that turn ambitious ideas into production reality.",
+      "ctaConsultation": "Schedule Consultation",
+      "ctaExplore": "Explore Solutions",
+      "ctaAi": "Talk to AI Assistant"
+    },
+    "aboutSnippet": {
+      "eyebrow": "About Edwyz",
+      "title": "A team obsessed with turning AI into real outcomes",
+      "description": "We're a global team of engineers, data scientists, and product builders helping enterprises adopt AI, modernize infrastructure, and ship better software — faster.",
+      "stats": {
+        "projectsDelivered": "Projects Delivered",
+        "clientsServed": "Clients Served",
+        "countriesReached": "Countries Reached",
+        "teamMembers": "Team Members"
+      }
+    },
+    "servicesGrid": {
+      "eyebrow": "What We Do",
+      "title": "End-to-end technology services",
+      "description": "From AI strategy to production engineering, we cover the full stack of what modern enterprises need to compete.",
+      "viewAll": "View All Services"
+    },
+    "techStack": {
+      "eyebrow": "Technology",
+      "title": "A modern, battle-tested technology stack",
+      "categories": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "ai": "AI",
+        "cloud": "Cloud",
+        "data": "Data"
+      }
+    },
+    "industries": {
+      "eyebrow": "Industries",
+      "title": "Purpose-built solutions for every industry",
+      "description": "Deep domain expertise across the sectors that depend most on getting data and AI right."
+    },
+    "caseStudiesPreview": {
+      "eyebrow": "Proof, not promises",
+      "title": "Results our clients can measure",
+      "readCaseStudy": "Read case study",
+      "viewAll": "View All Case Studies"
+    },
+    "testimonials": {
+      "eyebrow": "Trusted By Industry Leaders",
+      "title": "What our clients say"
+    },
+    "blogPreview": {
+      "eyebrow": "Insights",
+      "title": "Latest from the Edwyz blog",
+      "readMore": "Read More Articles"
+    },
+    "contactCta": {
+      "title": "Ready to build what's next?",
+      "description": "Tell us about your project and we'll get back to you within one business day with next steps.",
+      "cta": "Schedule a Consultation"
+    }
+  },
+  "ServicesPage": {
+    "metaTitle": "Services",
+    "metaDescription": "Explore Edwyz's full range of AI, software, data, and cloud engineering services.",
+    "eyebrow": "Services",
+    "title": "Everything you need to build, scale, and modernize",
+    "description": "From AI strategy to production software, our teams cover the full technology stack."
+  },
+  "ServiceDetailPage": {
+    "eyebrow": "Service",
+    "whatWeDeliver": "What we deliver",
+    "scheduleConsultation": "Schedule Consultation",
+    "backToAllServices": "Back to All Services"
+  },
+  "IndustriesPage": {
+    "metaTitle": "Industries",
+    "metaDescription": "Industry-specific AI and software solutions from Edwyz.",
+    "eyebrow": "Industries",
+    "title": "Built for the industries that demand precision",
+    "description": "Deep domain expertise across the sectors that depend most on getting data and AI right."
+  },
+  "IndustryDetailPage": {
+    "eyebrow": "Industry",
+    "relatedCaseStudies": "Related case studies",
+    "talkToOurTeam": "Talk to Our Team",
+    "backToAllIndustries": "Back to All Industries"
+  },
+  "AboutPage": {
+    "metaTitle": "About Us",
+    "metaDescription": "Learn about Edwyz's story, vision, mission, and the team building the future of AI and software.",
+    "eyebrow": "About Edwyz",
+    "title": "We build the technology that powers what's next",
+    "intro": "Edwyz was founded to close the gap between what AI promises and what enterprises can actually ship. We combine deep technical expertise in AI, data, and cloud engineering with a relentless focus on production-grade delivery — because a brilliant model that never reaches users isn't a result, it's a demo.",
+    "visionTitle": "Our Vision",
+    "visionBody": "A world where every enterprise has the technology foundation to turn data into decisions and ideas into shipped products — at the speed AI now makes possible.",
+    "missionTitle": "Our Mission",
+    "missionBody": "To design, build, and scale intelligent systems for our clients with the same rigor we'd demand of our own products.",
+    "coreValues": "Core Values",
+    "values": {
+      "engineeringExcellence": {
+        "title": "Engineering Excellence",
+        "description": "We hold our work to a production-grade standard, every time."
+      },
+      "clientObsession": {
+        "title": "Client Obsession",
+        "description": "Your outcomes are the only metric that matters to us."
+      },
+      "responsibleAi": {
+        "title": "Responsible AI",
+        "description": "We build AI systems that are transparent, safe, and accountable."
+      },
+      "continuousLearning": {
+        "title": "Continuous Learning",
+        "description": "The technology moves fast — so do we."
+      }
+    },
+    "leadershipTitle": "A note from our leadership",
+    "leadershipQuote": "We started Edwyz because we kept seeing the same pattern: companies investing heavily in AI initiatives that never made it past the pilot stage. Our job is to make sure that doesn't happen to you — we measure our success by what actually ships and the impact it has.",
+    "workWithUs": "Work With Us"
+  },
+  "CareersPage": {
+    "metaTitle": "Careers",
+    "metaDescription": "Join Edwyz and help build the future of AI and software engineering.",
+    "eyebrow": "Careers",
+    "title": "Build the future of AI with us",
+    "description": "We're a remote-first team of engineers, scientists, and product builders. Here's what we're hiring for right now.",
+    "apply": "Apply",
+    "noFit": "Don't see a fit?",
+    "applyAnyway": "Apply anyway",
+    "alwaysLooking": "we're always looking for great people."
+  },
+  "ApplyPage": {
+    "metaTitle": "Apply",
+    "metaDescription": "Apply to join the Edwyz team.",
+    "eyebrow": "Careers",
+    "applyTitle": "Apply",
+    "generalApplication": "General Application",
+    "noRoleDescription": "Tell us why you'd be a great fit for Edwyz."
+  },
+  "ContactPage": {
+    "metaTitle": "Contact",
+    "metaDescription": "Get in touch with Edwyz to discuss your next AI or software project.",
+    "eyebrow": "Contact Us",
+    "title": "Let's build something great together",
+    "description": "Tell us about your project and a member of our team will follow up within one business day.",
+    "remoteFirst": "Remote-first, with hubs across North America, Europe, and Asia."
+  },
+  "ContactForm": {
+    "genericError": "Something went wrong. Please try again.",
+    "successTitle": "Thanks — message received.",
+    "successBody": "Our team will get back to you within one business day.",
+    "fullName": "Full name",
+    "email": "Email address",
+    "company": "Company",
+    "phone": "Phone number",
+    "budgetRange": "Budget range",
+    "budgetUnder25k": "Under $25k",
+    "budget25to100k": "$25k – $100k",
+    "budget100to500k": "$100k – $500k",
+    "budgetOver500k": "$500k+",
+    "timeline": "Timeline",
+    "timelineImmediate": "Immediate",
+    "timeline1to3": "1–3 months",
+    "timeline3to6": "3–6 months",
+    "timelineExploring": "Just exploring",
+    "requirements": "Tell us about your project requirements",
+    "sending": "Sending...",
+    "sendMessage": "Send Message"
+  },
+  "ApplicationForm": {
+    "genericError": "Something went wrong. Please try again.",
+    "successTitle": "Application received.",
+    "successBody": "Thanks for applying to {role}. Our team will review and follow up soon.",
+    "fullName": "Full name",
+    "email": "Email address",
+    "phone": "Phone number",
+    "messagePlaceholder": "Tell us a bit about yourself and why you're a good fit (link to resume/portfolio welcome)",
+    "resumeNote": "Resume upload isn't wired up yet — for now, paste a link to your resume or LinkedIn above.",
+    "submitting": "Submitting...",
+    "submitApplication": "Submit Application"
+  },
+  "AiHubPage": {
+    "metaTitle": "AI Innovation Hub",
+    "metaDescription": "Edwyz's dedicated hub for AI innovation, powered by Claude.",
+    "eyebrow": "AI Innovation Hub",
+    "title": "Talk to our Claude-powered AI assistant",
+    "description": "Our AI assistant is trained on Edwyz's services, case studies, and expertise so it can answer questions and point you to the right solution instantly. Click the chat bubble in the bottom-right corner of any page to start a conversation — or talk to our team directly.",
+    "talkToOurTeam": "Talk to Our Team"
+  },
+  "PrivacyPage": {
+    "metaTitle": "Privacy Policy",
+    "title": "Privacy Policy",
+    "body": "This is a placeholder privacy policy page. Full policy content covering data collection, usage, and user rights will be added prior to production launch."
+  },
+  "TermsPage": {
+    "metaTitle": "Terms of Service",
+    "title": "Terms of Service",
+    "body": "This is a placeholder terms of service page. Full terms will be added prior to production launch."
+  },
+  "BlogPage": {
+    "metaTitle": "Blog",
+    "metaDescription": "Insights on AI, data engineering, and software from the Edwyz team.",
+    "eyebrow": "Insights",
+    "title": "The Edwyz Blog"
+  },
+  "BlogPostPage": {
+    "backToBlog": "Back to Blog"
+  },
+  "CaseStudiesPage": {
+    "metaTitle": "Case Studies",
+    "metaDescription": "Real results Edwyz has delivered for clients across industries.",
+    "eyebrow": "Case Studies",
+    "title": "Results our clients can measure"
+  },
+  "CaseStudyDetailPage": {
+    "client": "Client",
+    "theChallenge": "The Challenge",
+    "theSolution": "The Solution",
+    "startSimilarProject": "Start a Similar Project",
+    "backToCaseStudies": "Back to Case Studies"
+  }
+}

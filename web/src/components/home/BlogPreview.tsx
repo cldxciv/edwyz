@@ -1,17 +1,20 @@
-import Link from "next/link";
+import { getLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { getPayloadClient } from "@/lib/payload";
 
 export async function BlogPreview() {
+  const t = await getTranslations("Home.blogPreview");
+  const locale = await getLocale();
   const payload = await getPayloadClient();
-  const { docs: blogPosts } = await payload.find({ collection: "posts", sort: "-publishedAt", limit: 3 });
+  const { docs: blogPosts } = await payload.find({ collection: "posts", sort: "-publishedAt", limit: 3, locale });
 
   return (
     <section className="border-y border-border/60 bg-surface/40 py-24">
       <Container>
-        <SectionHeading eyebrow="Insights" title="Latest from the Edwyz blog" />
+        <SectionHeading eyebrow={t("eyebrow")} title={t("title")} />
         <div className="mt-16 grid gap-6 lg:grid-cols-3">
           {blogPosts.map((post) => (
             <Link
@@ -32,7 +35,7 @@ export async function BlogPreview() {
           ))}
         </div>
         <div className="mt-12 flex justify-center">
-          <Button href="/blog" variant="secondary">Read More Articles</Button>
+          <Button href="/blog" variant="secondary">{t("readMore")}</Button>
         </div>
       </Container>
     </section>

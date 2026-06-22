@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { getLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -6,13 +7,15 @@ import { Button } from "@/components/ui/Button";
 import { getPayloadClient } from "@/lib/payload";
 
 export async function CaseStudiesPreview() {
+  const t = await getTranslations("Home.caseStudiesPreview");
+  const locale = await getLocale();
   const payload = await getPayloadClient();
-  const { docs: featured } = await payload.find({ collection: "case-studies", limit: 3 });
+  const { docs: featured } = await payload.find({ collection: "case-studies", limit: 3, locale });
 
   return (
     <section className="border-y border-border/60 bg-surface/40 py-24">
       <Container>
-        <SectionHeading eyebrow="Proof, not promises" title="Results our clients can measure" />
+        <SectionHeading eyebrow={t("eyebrow")} title={t("title")} />
         <div className="mt-16 grid gap-6 lg:grid-cols-3">
           {featured.map((cs) => (
             <Link
@@ -32,13 +35,13 @@ export async function CaseStudiesPreview() {
                 ))}
               </div>
               <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-cyan opacity-0 transition-opacity group-hover:opacity-100">
-                Read case study <ArrowUpRight size={14} />
+                {t("readCaseStudy")} <ArrowUpRight size={14} />
               </span>
             </Link>
           ))}
         </div>
         <div className="mt-12 flex justify-center">
-          <Button href="/case-studies" variant="secondary">View All Case Studies</Button>
+          <Button href="/case-studies" variant="secondary">{t("viewAll")}</Button>
         </div>
       </Container>
     </section>

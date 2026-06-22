@@ -1,0 +1,246 @@
+{
+  "Nav": {
+    "services": "Services",
+    "industries": "Secteurs",
+    "caseStudies": "Études de Cas",
+    "about": "À propos",
+    "blog": "Blog",
+    "careers": "Carrières",
+    "scheduleConsultation": "Planifier une Consultation"
+  },
+  "Footer": {
+    "services": "Services",
+    "company": "Entreprise",
+    "getInTouch": "Contactez-nous",
+    "aboutUs": "À propos de nous",
+    "rightsReserved": "Tous droits réservés.",
+    "privacyPolicy": "Politique de Confidentialité",
+    "termsOfService": "Conditions d'Utilisation",
+    "scheduleCta": "Planifier une consultation"
+  },
+  "Home": {
+    "hero": {
+      "eyebrow": "IA · Données · Ingénierie",
+      "titlePrefix": "Construire le",
+      "titleHighlight": "Futur",
+      "titleSuffix": "avec l'IA, les Données et l'Innovation",
+      "subtitle": "Edwyz accompagne les entreprises pour concevoir, construire et déployer des systèmes intelligents — des agents IA aux plateformes cloud — qui transforment des idées ambitieuses en réalité de production.",
+      "ctaConsultation": "Planifier une Consultation",
+      "ctaExplore": "Découvrir nos Solutions",
+      "ctaAi": "Parler à l'Assistant IA"
+    },
+    "aboutSnippet": {
+      "eyebrow": "À propos d'Edwyz",
+      "title": "Une équipe obsédée par la transformation de l'IA en résultats concrets",
+      "description": "Nous sommes une équipe mondiale d'ingénieurs, de data scientists et de créateurs de produits qui aident les entreprises à adopter l'IA, à moderniser leur infrastructure et à livrer de meilleurs logiciels — plus rapidement.",
+      "stats": {
+        "projectsDelivered": "Projets Livrés",
+        "clientsServed": "Clients Servis",
+        "countriesReached": "Pays Couverts",
+        "teamMembers": "Membres de l'Équipe"
+      }
+    },
+    "servicesGrid": {
+      "eyebrow": "Ce Que Nous Faisons",
+      "title": "Des services technologiques de bout en bout",
+      "description": "De la stratégie IA à l'ingénierie en production, nous couvrons toute la pile technologique dont les entreprises modernes ont besoin pour rester compétitives.",
+      "viewAll": "Voir Tous les Services"
+    },
+    "techStack": {
+      "eyebrow": "Technologie",
+      "title": "Une pile technologique moderne et éprouvée",
+      "categories": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "ai": "IA",
+        "cloud": "Cloud",
+        "data": "Données"
+      }
+    },
+    "industries": {
+      "eyebrow": "Secteurs",
+      "title": "Des solutions conçues pour chaque secteur",
+      "description": "Une expertise approfondie dans les secteurs qui dépendent le plus d'une bonne maîtrise des données et de l'IA."
+    },
+    "caseStudiesPreview": {
+      "eyebrow": "Des preuves, pas des promesses",
+      "title": "Des résultats que nos clients peuvent mesurer",
+      "readCaseStudy": "Lire l'étude de cas",
+      "viewAll": "Voir Toutes les Études de Cas"
+    },
+    "testimonials": {
+      "eyebrow": "La Confiance des Leaders du Secteur",
+      "title": "Ce que disent nos clients"
+    },
+    "blogPreview": {
+      "eyebrow": "Perspectives",
+      "title": "Dernières actualités du blog Edwyz",
+      "readMore": "Lire Plus d'Articles"
+    },
+    "contactCta": {
+      "title": "Prêt à construire la prochaine étape ?",
+      "description": "Parlez-nous de votre projet et nous vous répondrons dans un jour ouvré avec les prochaines étapes.",
+      "cta": "Planifier une Consultation"
+    }
+  },
+  "ServicesPage": {
+    "metaTitle": "Services",
+    "metaDescription": "Découvrez toute la gamme de services IA, logiciels, données et cloud d'Edwyz.",
+    "eyebrow": "Services",
+    "title": "Tout ce dont vous avez besoin pour construire, évoluer et moderniser",
+    "description": "De la stratégie IA aux logiciels en production, nos équipes couvrent toute la pile technologique."
+  },
+  "ServiceDetailPage": {
+    "eyebrow": "Service",
+    "whatWeDeliver": "Ce que nous livrons",
+    "scheduleConsultation": "Planifier une Consultation",
+    "backToAllServices": "Retour à Tous les Services"
+  },
+  "IndustriesPage": {
+    "metaTitle": "Secteurs",
+    "metaDescription": "Des solutions IA et logicielles spécifiques à chaque secteur, par Edwyz.",
+    "eyebrow": "Secteurs",
+    "title": "Conçu pour les secteurs qui exigent la précision",
+    "description": "Une expertise approfondie dans les secteurs qui dépendent le plus d'une bonne maîtrise des données et de l'IA."
+  },
+  "IndustryDetailPage": {
+    "eyebrow": "Secteur",
+    "relatedCaseStudies": "Études de cas associées",
+    "talkToOurTeam": "Parler à Notre Équipe",
+    "backToAllIndustries": "Retour à Tous les Secteurs"
+  },
+  "AboutPage": {
+    "metaTitle": "À propos de nous",
+    "metaDescription": "Découvrez l'histoire, la vision, la mission et l'équipe d'Edwyz qui construit l'avenir de l'IA et des logiciels.",
+    "eyebrow": "À propos d'Edwyz",
+    "title": "Nous construisons la technologie qui propulse l'avenir",
+    "intro": "Edwyz a été fondée pour combler l'écart entre ce que promet l'IA et ce que les entreprises peuvent réellement livrer. Nous combinons une expertise technique approfondie en IA, données et ingénierie cloud avec une exigence constante de livraison de qualité production — car un modèle brillant qui n'atteint jamais les utilisateurs n'est pas un résultat, c'est une démonstration.",
+    "visionTitle": "Notre Vision",
+    "visionBody": "Un monde où chaque entreprise dispose de la fondation technologique nécessaire pour transformer les données en décisions et les idées en produits livrés — à la vitesse que l'IA permet désormais.",
+    "missionTitle": "Notre Mission",
+    "missionBody": "Concevoir, construire et déployer des systèmes intelligents pour nos clients avec la même rigueur que nous exigerions de nos propres produits.",
+    "coreValues": "Valeurs Fondamentales",
+    "values": {
+      "engineeringExcellence": {
+        "title": "Excellence en Ingénierie",
+        "description": "Nous maintenons notre travail à un niveau de qualité production, à chaque fois."
+      },
+      "clientObsession": {
+        "title": "Obsession Client",
+        "description": "Vos résultats sont la seule mesure qui compte pour nous."
+      },
+      "responsibleAi": {
+        "title": "IA Responsable",
+        "description": "Nous construisons des systèmes d'IA transparents, sûrs et responsables."
+      },
+      "continuousLearning": {
+        "title": "Apprentissage Continu",
+        "description": "La technologie évolue vite — nous aussi."
+      }
+    },
+    "leadershipTitle": "Un mot de notre direction",
+    "leadershipQuote": "Nous avons fondé Edwyz car nous observions toujours le même schéma : des entreprises investissant massivement dans des initiatives d'IA qui ne dépassaient jamais le stade pilote. Notre rôle est de veiller à ce que cela ne vous arrive pas — nous mesurons notre succès par ce qui est réellement livré et par son impact.",
+    "workWithUs": "Travaillez avec Nous"
+  },
+  "CareersPage": {
+    "metaTitle": "Carrières",
+    "metaDescription": "Rejoignez Edwyz et participez à la construction de l'avenir de l'IA et de l'ingénierie logicielle.",
+    "eyebrow": "Carrières",
+    "title": "Construisez l'avenir de l'IA avec nous",
+    "description": "Nous sommes une équipe en télétravail composée d'ingénieurs, de scientifiques et de créateurs de produits. Voici ce que nous recrutons actuellement.",
+    "apply": "Postuler",
+    "noFit": "Vous ne trouvez pas le poste idéal ?",
+    "applyAnyway": "Postulez quand même",
+    "alwaysLooking": "nous recherchons toujours des personnes talentueuses."
+  },
+  "ApplyPage": {
+    "metaTitle": "Postuler",
+    "metaDescription": "Postulez pour rejoindre l'équipe Edwyz.",
+    "eyebrow": "Carrières",
+    "applyTitle": "Postuler",
+    "generalApplication": "Candidature Générale",
+    "noRoleDescription": "Dites-nous pourquoi vous seriez parfait pour Edwyz."
+  },
+  "ContactPage": {
+    "metaTitle": "Contact",
+    "metaDescription": "Contactez Edwyz pour discuter de votre prochain projet IA ou logiciel.",
+    "eyebrow": "Contactez-nous",
+    "title": "Construisons ensemble quelque chose de formidable",
+    "description": "Parlez-nous de votre projet et un membre de notre équipe vous répondra dans un jour ouvré.",
+    "remoteFirst": "Équipe en télétravail, avec des bureaux en Amérique du Nord, en Europe et en Asie."
+  },
+  "ContactForm": {
+    "genericError": "Une erreur s'est produite. Veuillez réessayer.",
+    "successTitle": "Merci — message reçu.",
+    "successBody": "Notre équipe vous répondra dans un jour ouvré.",
+    "fullName": "Nom complet",
+    "email": "Adresse e-mail",
+    "company": "Entreprise",
+    "phone": "Numéro de téléphone",
+    "budgetRange": "Fourchette de budget",
+    "budgetUnder25k": "Moins de 25 000 $",
+    "budget25to100k": "25 000 $ – 100 000 $",
+    "budget100to500k": "100 000 $ – 500 000 $",
+    "budgetOver500k": "Plus de 500 000 $",
+    "timeline": "Calendrier",
+    "timelineImmediate": "Immédiat",
+    "timeline1to3": "1 à 3 mois",
+    "timeline3to6": "3 à 6 mois",
+    "timelineExploring": "Juste en exploration",
+    "requirements": "Parlez-nous des besoins de votre projet",
+    "sending": "Envoi en cours...",
+    "sendMessage": "Envoyer le Message"
+  },
+  "ApplicationForm": {
+    "genericError": "Une erreur s'est produite. Veuillez réessayer.",
+    "successTitle": "Candidature reçue.",
+    "successBody": "Merci d'avoir postulé pour {role}. Notre équipe va l'examiner et reviendra vers vous bientôt.",
+    "fullName": "Nom complet",
+    "email": "Adresse e-mail",
+    "phone": "Numéro de téléphone",
+    "messagePlaceholder": "Parlez-nous un peu de vous et pourquoi vous seriez un bon candidat (un lien vers votre CV/portfolio est bienvenu)",
+    "resumeNote": "Le téléchargement de CV n'est pas encore disponible — pour l'instant, collez un lien vers votre CV ou LinkedIn ci-dessus.",
+    "submitting": "Envoi en cours...",
+    "submitApplication": "Envoyer la Candidature"
+  },
+  "AiHubPage": {
+    "metaTitle": "Pôle d'Innovation IA",
+    "metaDescription": "Le pôle dédié d'Edwyz à l'innovation IA, propulsé par Claude.",
+    "eyebrow": "Pôle d'Innovation IA",
+    "title": "Parlez à notre assistant IA propulsé par Claude",
+    "description": "Notre assistant IA est formé sur les services, études de cas et l'expertise d'Edwyz, afin de répondre aux questions et de vous orienter instantanément vers la bonne solution. Cliquez sur la bulle de chat en bas à droite de n'importe quelle page pour démarrer une conversation — ou parlez directement à notre équipe.",
+    "talkToOurTeam": "Parler à Notre Équipe"
+  },
+  "PrivacyPage": {
+    "metaTitle": "Politique de Confidentialité",
+    "title": "Politique de Confidentialité",
+    "body": "Cette page de politique de confidentialité est provisoire. Le contenu complet de la politique, couvrant la collecte de données, l'utilisation et les droits des utilisateurs, sera ajouté avant le lancement en production."
+  },
+  "TermsPage": {
+    "metaTitle": "Conditions d'Utilisation",
+    "title": "Conditions d'Utilisation",
+    "body": "Cette page de conditions d'utilisation est provisoire. Les conditions complètes seront ajoutées avant le lancement en production."
+  },
+  "BlogPage": {
+    "metaTitle": "Blog",
+    "metaDescription": "Des perspectives sur l'IA, l'ingénierie des données et les logiciels par l'équipe Edwyz.",
+    "eyebrow": "Perspectives",
+    "title": "Le Blog Edwyz"
+  },
+  "BlogPostPage": {
+    "backToBlog": "Retour au Blog"
+  },
+  "CaseStudiesPage": {
+    "metaTitle": "Études de Cas",
+    "metaDescription": "Des résultats réels livrés par Edwyz à des clients dans divers secteurs.",
+    "eyebrow": "Études de Cas",
+    "title": "Des résultats que nos clients peuvent mesurer"
+  },
+  "CaseStudyDetailPage": {
+    "client": "Client",
+    "theChallenge": "Le Défi",
+    "theSolution": "La Solution",
+    "startSimilarProject": "Démarrer un Projet Similaire",
+    "backToCaseStudies": "Retour aux Études de Cas"
+  }
+}

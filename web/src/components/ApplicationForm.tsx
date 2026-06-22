@@ -1,12 +1,14 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 
 const fieldClass =
   "w-full rounded-lg border border-border bg-surface-2 px-4 py-3 text-sm text-foreground placeholder:text-muted focus:border-cyan/60 focus:outline-none";
 
 export function ApplicationForm({ roleSlug, roleTitle }: { roleSlug: string; roleTitle: string }) {
+  const t = useTranslations("ApplicationForm");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [error, setError] = useState("");
 
@@ -26,14 +28,14 @@ export function ApplicationForm({ roleSlug, roleTitle }: { roleSlug: string; rol
       });
       const json = await res.json();
       if (!res.ok || !json.ok) {
-        setError(json.error ?? "Something went wrong. Please try again.");
+        setError(json.error ?? t("genericError"));
         setStatus("error");
         return;
       }
       setStatus("success");
       form.reset();
     } catch {
-      setError("Something went wrong. Please try again.");
+      setError(t("genericError"));
       setStatus("error");
     }
   }
@@ -41,9 +43,9 @@ export function ApplicationForm({ roleSlug, roleTitle }: { roleSlug: string; rol
   if (status === "success") {
     return (
       <div className="rounded-2xl border border-cyan/30 bg-cyan/5 p-8 text-center">
-        <h3 className="font-heading text-lg font-semibold text-foreground">Application received.</h3>
+        <h3 className="font-heading text-lg font-semibold text-foreground">{t("successTitle")}</h3>
         <p className="mt-2 text-sm text-muted">
-          Thanks for applying to {roleTitle === "General Application" ? "Edwyz" : roleTitle}. Our team will review and follow up soon.
+          {t("successBody", { role: roleSlug === "general" ? "Edwyz" : roleTitle })}
         </p>
       </div>
     );
@@ -52,24 +54,17 @@ export function ApplicationForm({ roleSlug, roleTitle }: { roleSlug: string; rol
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
-        <input name="name" required placeholder="Full name" className={fieldClass} />
-        <input name="email" type="email" required placeholder="Email address" className={fieldClass} />
+        <input name="name" required placeholder={t("fullName")} className={fieldClass} />
+        <input name="email" type="email" required placeholder={t("email")} className={fieldClass} />
       </div>
-      <input name="phone" placeholder="Phone number" className={fieldClass} />
-      <textarea
-        name="message"
-        rows={5}
-        placeholder="Tell us a bit about yourself and why you're a good fit (link to resume/portfolio welcome)"
-        className={fieldClass}
-      />
-      <p className="text-xs text-muted">
-        Resume upload isn&apos;t wired up yet — for now, paste a link to your resume or LinkedIn above.
-      </p>
+      <input name="phone" placeholder={t("phone")} className={fieldClass} />
+      <textarea name="message" rows={5} placeholder={t("messagePlaceholder")} className={fieldClass} />
+      <p className="text-xs text-muted">{t("resumeNote")}</p>
 
       {error && <p className="text-sm text-red-400">{error}</p>}
 
       <Button type="submit" variant="primary" className="w-full sm:w-auto">
-        {status === "submitting" ? "Submitting..." : "Submit Application"}
+        {status === "submitting" ? t("submitting") : t("submitApplication")}
       </Button>
     </form>
   );

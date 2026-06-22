@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import type { Industry } from "@/lib/data/industries";
 
 export function IndustryCard({ industry }: { industry: Industry }) {

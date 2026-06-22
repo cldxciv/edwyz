@@ -2,14 +2,15 @@
 
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const stats = [
-  { label: "Projects Delivered", value: 240 },
-  { label: "Clients Served", value: 95 },
-  { label: "Countries Reached", value: 18 },
-  { label: "Team Members", value: 150 },
+  { key: "projectsDelivered", value: 240 },
+  { key: "clientsServed", value: 95 },
+  { key: "countriesReached", value: 18 },
+  { key: "teamMembers", value: 150 },
 ];
 
 function Counter({ value }: { value: number }) {
@@ -37,14 +38,12 @@ function Counter({ value }: { value: number }) {
 }
 
 export function AboutSnippet() {
+  const t = useTranslations("Home.aboutSnippet");
+
   return (
     <section className="py-24">
       <Container>
-        <SectionHeading
-          eyebrow="About Edwyz"
-          title="A team obsessed with turning AI into real outcomes"
-          description="We're a global team of engineers, data scientists, and product builders helping enterprises adopt AI, modernize infrastructure, and ship better software — faster."
-        />
+        <SectionHeading eyebrow={t("eyebrow")} title={t("title")} description={t("description")} />
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -53,9 +52,9 @@ export function AboutSnippet() {
           className="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4"
         >
           {stats.map((s) => (
-            <div key={s.label} className="text-center">
+            <div key={s.key} className="text-center">
               <Counter value={s.value} />
-              <p className="mt-2 text-sm text-muted">{s.label}</p>
+              <p className="mt-2 text-sm text-muted">{t(`stats.${s.key}`)}</p>
             </div>
           ))}
         </motion.div>

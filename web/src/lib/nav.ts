@@ -1,11 +1,11 @@
 export const mainNav = [
-  { label: "Services", href: "/services" },
-  { label: "Industries", href: "/industries" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "About", href: "/about" },
-  { label: "Blog", href: "/blog" },
-  { label: "Careers", href: "/careers" },
-];
+  { key: "services", href: "/services" },
+  { key: "industries", href: "/industries" },
+  { key: "caseStudies", href: "/case-studies" },
+  { key: "about", href: "/about" },
+  { key: "blog", href: "/blog" },
+  { key: "careers", href: "/careers" },
+] as const;
 
 export const siteConfig = {
   name: "Edwyz",

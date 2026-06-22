@@ -1,5 +1,5 @@
-import { services } from "@/lib/data/services";
-import { industries } from "@/lib/data/industries";
+import { getServicesInLocale } from "@/lib/data/services";
+import { getIndustriesInLocale } from "@/lib/data/industries";
 import { getPayloadClient } from "@/lib/payload";
 
 export type KnowledgeChunk = {
@@ -35,7 +35,7 @@ export async function getKnowledgeChunks(): Promise<KnowledgeChunk[]> {
 
   const chunks: KnowledgeChunk[] = [];
 
-  for (const s of services) {
+  for (const s of getServicesInLocale("en")) {
     chunks.push({
       title: `Service: ${s.name}`,
       text: `${s.name}. ${s.description} Capabilities: ${s.capabilities.join(", ")}.`,
@@ -43,7 +43,7 @@ export async function getKnowledgeChunks(): Promise<KnowledgeChunk[]> {
     });
   }
 
-  for (const i of industries) {
+  for (const i of getIndustriesInLocale("en")) {
     chunks.push({
       title: `Industry: ${i.name}`,
       text: `${i.name}. ${i.description}`,

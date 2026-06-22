@@ -1,15 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 import { mainNav, siteConfig } from "@/lib/nav";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const t = useTranslations("Nav");
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/70 backdrop-blur-xl">
@@ -32,14 +35,15 @@ export function Header() {
               href={item.href}
               className="text-sm font-medium text-muted transition-colors hover:text-foreground"
             >
-              {item.label}
+              {t(item.key)}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-6 lg:flex">
+          <LanguageSwitcher />
           <Button href="/contact" variant="primary">
-            Schedule Consultation
+            {t("scheduleConsultation")}
           </Button>
         </div>
 
@@ -62,11 +66,14 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 className="text-sm font-medium text-muted hover:text-foreground"
               >
-                {item.label}
+                {t(item.key)}
               </Link>
             ))}
-            <Button href="/contact" variant="primary" className="mt-2 w-fit">
-              Schedule Consultation
+            <div className="mt-2">
+              <LanguageSwitcher />
+            </div>
+            <Button href="/contact" variant="primary" className="w-fit">
+              {t("scheduleConsultation")}
             </Button>
           </Container>
         </div>

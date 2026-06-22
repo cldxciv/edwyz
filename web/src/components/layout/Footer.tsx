@@ -1,10 +1,9 @@
-import Link from "next/link";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
-import { services } from "@/lib/data/services";
+import { getServices } from "@/lib/data/services";
 import { siteConfig } from "@/lib/nav";
-
-const footerServices = services.slice(0, 6);
 
 const socials = [
   { label: "LinkedIn", href: "https://linkedin.com" },
@@ -13,7 +12,11 @@ const socials = [
   { label: "Instagram", href: "https://instagram.com" },
 ];
 
-export function Footer() {
+export async function Footer() {
+  const t = await getTranslations("Footer");
+  const nav = await getTranslations("Nav");
+  const services = (await getServices()).slice(0, 6);
+
   return (
     <footer className="border-t border-border/60 bg-surface">
       <Container className="grid gap-10 py-16 lg:grid-cols-4">
@@ -43,9 +46,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold text-foreground">Services</h3>
+          <h3 className="text-sm font-semibold text-foreground">{t("services")}</h3>
           <ul className="mt-4 space-y-3">
-            {footerServices.map((s) => (
+            {services.map((s) => (
               <li key={s.slug}>
                 <Link href={`/services/${s.slug}`} className="text-sm text-muted hover:text-foreground">
                   {s.name}
@@ -56,13 +59,13 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold text-foreground">Company</h3>
+          <h3 className="text-sm font-semibold text-foreground">{t("company")}</h3>
           <ul className="mt-4 space-y-3">
             {[
-              { label: "About Us", href: "/about" },
-              { label: "Case Studies", href: "/case-studies" },
-              { label: "Blog", href: "/blog" },
-              { label: "Careers", href: "/careers" },
+              { label: t("aboutUs"), href: "/about" },
+              { label: nav("caseStudies"), href: "/case-studies" },
+              { label: nav("blog"), href: "/blog" },
+              { label: nav("careers"), href: "/careers" },
             ].map((l) => (
               <li key={l.href}>
                 <Link href={l.href} className="text-sm text-muted hover:text-foreground">
@@ -74,13 +77,13 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold text-foreground">Get in touch</h3>
+          <h3 className="text-sm font-semibold text-foreground">{t("getInTouch")}</h3>
           <ul className="mt-4 space-y-3 text-sm text-muted">
             <li>hello@edwyz.com</li>
             <li>+1 (555) 010-0100</li>
             <li>
               <Link href="/contact" className="text-cyan hover:underline">
-                Schedule a consultation &rarr;
+                {t("scheduleCta")} &rarr;
               </Link>
             </li>
           </ul>
@@ -88,10 +91,12 @@ export function Footer() {
       </Container>
 
       <Container className="flex flex-col items-center justify-between gap-4 border-t border-border/60 py-6 sm:flex-row">
-        <p className="text-xs text-muted">&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
+        <p className="text-xs text-muted">
+          &copy; {new Date().getFullYear()} {siteConfig.name}. {t("rightsReserved")}
+        </p>
         <div className="flex gap-6 text-xs text-muted">
-          <Link href="/privacy" className="hover:text-foreground">Privacy Policy</Link>
-          <Link href="/terms" className="hover:text-foreground">Terms of Service</Link>
+          <Link href="/privacy" className="hover:text-foreground">{t("privacyPolicy")}</Link>
+          <Link href="/terms" className="hover:text-foreground">{t("termsOfService")}</Link>
         </div>
       </Container>
     </footer>
