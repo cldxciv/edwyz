@@ -2,10 +2,24 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { caseStudies, getCaseStudyBySlug } from "@/lib/data/case-studies";
+import { getPayloadClient } from "@/lib/payload";
 
-export function generateStaticParams() {
-  return caseStudies.map((cs) => ({ slug: cs.slug }));
+export const revalidate = 60;
+
+export async function generateStaticParams() {
+  const payload = await getPayloadClient();
+  const { docs } = await payload.find({ collection: "case-studies", limit: 100, depth: 0 });
+  return docs.map((cs) => ({ slug: cs.slug }));
+}
+
+async function getCaseStudy(slug: string) {
+  const payload = await getPayloadClient();
+  const { docs } = await payload.find({
+    collection: "case-studies",
+    where: { slug: { equals: slug } },
+    limit: 1,
+  });
+  return docs[0] ?? null;
 }
 
 export async function generateMetadata({
@@ -14,7 +28,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const cs = getCaseStudyBySlug(slug);
+  const cs = await getCaseStudy(slug);
   if (!cs) return {};
   return { title: cs.title, description: cs.summary };
 }
@@ -25,7 +39,7 @@ export default async function CaseStudyDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const cs = getCaseStudyBySlug(slug);
+  const cs = await getCaseStudy(slug);
   if (!cs) notFound();
 
   return (
@@ -36,8 +50,8 @@ export default async function CaseStudyDetailPage({
         <p className="mt-4 text-sm text-muted">Client: {cs.client}</p>
 
         <div className="mt-10 grid grid-cols-3 gap-6 rounded-2xl border border-border bg-surface p-6">
-          {cs.results.map((r) => (
-            <div key={r.label} className="text-center">
+          {cs.results.map((r: { id?: string | null; label: string; value: string }) => (
+            <div key={r.id ?? r.label} className="text-center">
               <p className="font-display text-2xl font-bold gradient-text sm:text-3xl">{r.value}</p>
               <p className="mt-1 text-xs text-muted">{r.label}</p>
             </div>

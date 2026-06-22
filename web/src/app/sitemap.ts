@@ -1,11 +1,16 @@
 import type { MetadataRoute } from "next";
 import { services } from "@/lib/data/services";
 import { industries } from "@/lib/data/industries";
-import { caseStudies } from "@/lib/data/case-studies";
-import { blogPosts } from "@/lib/data/blog";
 import { siteConfig } from "@/lib/nav";
+import { getPayloadClient } from "@/lib/payload";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const payload = await getPayloadClient();
+  const [{ docs: caseStudies }, { docs: blogPosts }] = await Promise.all([
+    payload.find({ collection: "case-studies", limit: 100, depth: 0 }),
+    payload.find({ collection: "posts", limit: 100, depth: 0 }),
+  ]);
+
   const staticRoutes = [
     "",
     "/about",
@@ -37,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogRoutes = blogPosts.map((b) => ({
     url: `${siteConfig.url}/blog/${b.slug}`,
-    lastModified: new Date(b.date),
+    lastModified: new Date(b.publishedAt),
   }));
 
   return [...staticRoutes, ...serviceRoutes, ...industryRoutes, ...caseStudyRoutes, ...blogRoutes];

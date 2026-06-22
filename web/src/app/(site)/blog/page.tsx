@@ -2,20 +2,29 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { blogPosts } from "@/lib/data/blog";
+import { getPayloadClient } from "@/lib/payload";
 
 export const metadata: Metadata = {
   title: "Blog",
   description: "Insights on AI, data engineering, and software from the Edwyz team.",
 };
 
-export default function BlogPage() {
+export const revalidate = 60;
+
+export default async function BlogPage() {
+  const payload = await getPayloadClient();
+  const { docs: posts } = await payload.find({
+    collection: "posts",
+    sort: "-publishedAt",
+    limit: 50,
+  });
+
   return (
     <div className="py-24">
       <Container>
         <SectionHeading eyebrow="Insights" title="The Edwyz Blog" />
         <div className="mt-16 grid gap-6 lg:grid-cols-3">
-          {blogPosts.map((post) => (
+          {posts.map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}

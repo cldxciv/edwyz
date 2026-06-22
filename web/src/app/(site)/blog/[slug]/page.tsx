@@ -1,11 +1,26 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { RichText } from "@payloadcms/richtext-lexical/react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { blogPosts, getBlogPostBySlug } from "@/lib/data/blog";
+import { getPayloadClient } from "@/lib/payload";
 
-export function generateStaticParams() {
-  return blogPosts.map((p) => ({ slug: p.slug }));
+export const revalidate = 60;
+
+export async function generateStaticParams() {
+  const payload = await getPayloadClient();
+  const { docs } = await payload.find({ collection: "posts", limit: 100, depth: 0 });
+  return docs.map((p) => ({ slug: p.slug }));
+}
+
+async function getPost(slug: string) {
+  const payload = await getPayloadClient();
+  const { docs } = await payload.find({
+    collection: "posts",
+    where: { slug: { equals: slug } },
+    limit: 1,
+  });
+  return docs[0] ?? null;
 }
 
 export async function generateMetadata({
@@ -14,7 +29,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = getBlogPostBySlug(slug);
+  const post = await getPost(slug);
   if (!post) return {};
   return { title: post.title, description: post.excerpt };
 }
@@ -25,7 +40,7 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getBlogPostBySlug(slug);
+  const post = await getPost(slug);
   if (!post) notFound();
 
   return (
@@ -36,15 +51,19 @@ export default async function BlogPostPage({
         <div className="mt-4 flex gap-4 text-sm text-muted">
           <span>{post.author}</span>
           <span>&middot;</span>
-          <span>{new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
+          <span>
+            {new Date(post.publishedAt).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </span>
           <span>&middot;</span>
           <span>{post.readingTime}</span>
         </div>
 
-        <div className="mt-10 space-y-6">
-          {post.content.map((paragraph, i) => (
-            <p key={i} className="leading-relaxed text-muted">{paragraph}</p>
-          ))}
+        <div className="prose prose-invert mt-10 max-w-none space-y-6 [&_p]:leading-relaxed [&_p]:text-muted">
+          <RichText data={post.content} />
         </div>
 
         <div className="mt-12">

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { industries, getIndustryBySlug } from "@/lib/data/industries";
-import { caseStudies } from "@/lib/data/case-studies";
+import { getPayloadClient } from "@/lib/payload";
 
 export function generateStaticParams() {
   return industries.map((i) => ({ slug: i.slug }));
@@ -29,9 +29,12 @@ export default async function IndustryDetailPage({
   const industry = getIndustryBySlug(slug);
   if (!industry) notFound();
 
-  const relatedCaseStudies = caseStudies.filter(
-    (cs) => cs.industry.toLowerCase() === industry.name.toLowerCase()
-  );
+  const payload = await getPayloadClient();
+  const { docs: relatedCaseStudies } = await payload.find({
+    collection: "case-studies",
+    where: { industry: { equals: industry.name } },
+    limit: 10,
+  });
 
   return (
     <div className="py-24">

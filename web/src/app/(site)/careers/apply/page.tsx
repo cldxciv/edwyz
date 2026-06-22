@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ApplicationForm } from "@/components/ApplicationForm";
-import { jobListings } from "@/lib/data/careers";
+import { getPayloadClient } from "@/lib/payload";
 
 export const metadata: Metadata = {
   title: "Apply",
@@ -15,7 +15,18 @@ export default async function ApplyPage({
   searchParams: Promise<{ role?: string }>;
 }) {
   const { role } = await searchParams;
-  const job = role ? jobListings.find((j) => j.slug === role) : undefined;
+
+  let job = null;
+  if (role) {
+    const payload = await getPayloadClient();
+    const { docs } = await payload.find({
+      collection: "job-listings",
+      where: { slug: { equals: role } },
+      limit: 1,
+    });
+    job = docs[0] ?? null;
+  }
+
   const roleTitle = job?.title ?? "General Application";
   const roleSlug = job?.slug ?? "general";
 

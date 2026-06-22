@@ -2,9 +2,12 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
-import { blogPosts } from "@/lib/data/blog";
+import { getPayloadClient } from "@/lib/payload";
 
-export function BlogPreview() {
+export async function BlogPreview() {
+  const payload = await getPayloadClient();
+  const { docs: blogPosts } = await payload.find({ collection: "posts", sort: "-publishedAt", limit: 3 });
+
   return (
     <section className="border-y border-border/60 bg-surface/40 py-24">
       <Container>

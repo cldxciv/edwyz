@@ -3,10 +3,12 @@ import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
-import { caseStudies } from "@/lib/data/case-studies";
+import { getPayloadClient } from "@/lib/payload";
 
-export function CaseStudiesPreview() {
-  const featured = caseStudies.slice(0, 3);
+export async function CaseStudiesPreview() {
+  const payload = await getPayloadClient();
+  const { docs: featured } = await payload.find({ collection: "case-studies", limit: 3 });
+
   return (
     <section className="border-y border-border/60 bg-surface/40 py-24">
       <Container>
@@ -22,8 +24,8 @@ export function CaseStudiesPreview() {
               <h3 className="mt-3 font-heading text-lg font-semibold text-foreground">{cs.title}</h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{cs.summary}</p>
               <div className="mt-6 flex gap-6 border-t border-border pt-4">
-                {cs.results.slice(0, 2).map((r) => (
-                  <div key={r.label}>
+                {cs.results.slice(0, 2).map((r: { id?: string | null; label: string; value: string }) => (
+                  <div key={r.id ?? r.label}>
                     <p className="font-display text-xl font-bold gradient-text">{r.value}</p>
                     <p className="text-xs text-muted">{r.label}</p>
                   </div>

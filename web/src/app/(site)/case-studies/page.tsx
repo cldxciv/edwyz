@@ -2,14 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { caseStudies } from "@/lib/data/case-studies";
+import { getPayloadClient } from "@/lib/payload";
 
 export const metadata: Metadata = {
   title: "Case Studies",
   description: "Real results Edwyz has delivered for clients across industries.",
 };
 
-export default function CaseStudiesPage() {
+export const revalidate = 60;
+
+export default async function CaseStudiesPage() {
+  const payload = await getPayloadClient();
+  const { docs: caseStudies } = await payload.find({ collection: "case-studies", limit: 50 });
+
   return (
     <div className="py-24">
       <Container>
@@ -25,8 +30,8 @@ export default function CaseStudiesPage() {
               <h3 className="mt-3 font-heading text-lg font-semibold text-foreground">{cs.title}</h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{cs.summary}</p>
               <div className="mt-6 flex gap-6 border-t border-border pt-4">
-                {cs.results.slice(0, 2).map((r) => (
-                  <div key={r.label}>
+                {cs.results.slice(0, 2).map((r: { id?: string | null; label: string; value: string }) => (
+                  <div key={r.id ?? r.label}>
                     <p className="font-display text-xl font-bold gradient-text">{r.value}</p>
                     <p className="text-xs text-muted">{r.label}</p>
                   </div>

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
-import { jobListings } from "@/lib/data/careers";
+import { getPayloadClient } from "@/lib/payload";
 
 type ApplicationPayload = {
   roleSlug?: string;
@@ -18,11 +18,19 @@ export async function POST(request: Request) {
   const body = (await request.json()) as ApplicationPayload;
 
   const roleSlug = body.roleSlug?.trim() || "general";
-  const isKnownRole = roleSlug === "general" || jobListings.some((j) => j.slug === roleSlug);
 
-  if (!isKnownRole) {
-    return NextResponse.json({ ok: false, error: "Unknown role." }, { status: 400 });
+  if (roleSlug !== "general") {
+    const payload = await getPayloadClient();
+    const { docs } = await payload.find({
+      collection: "job-listings",
+      where: { slug: { equals: roleSlug } },
+      limit: 1,
+    });
+    if (docs.length === 0) {
+      return NextResponse.json({ ok: false, error: "Unknown role." }, { status: 400 });
+    }
   }
+
   if (!body.name?.trim() || !body.email?.trim() || !isValidEmail(body.email)) {
     return NextResponse.json({ ok: false, error: "Please provide a valid name and email." }, { status: 400 });
   }

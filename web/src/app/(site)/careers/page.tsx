@@ -2,14 +2,23 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
-import { jobListings } from "@/lib/data/careers";
+import { getPayloadClient } from "@/lib/payload";
 
 export const metadata: Metadata = {
   title: "Careers",
   description: "Join Edwyz and help build the future of AI and software engineering.",
 };
 
-export default function CareersPage() {
+export const revalidate = 60;
+
+export default async function CareersPage() {
+  const payload = await getPayloadClient();
+  const { docs: jobListings } = await payload.find({
+    collection: "job-listings",
+    where: { isOpen: { equals: true } },
+    limit: 50,
+  });
+
   return (
     <div className="py-24">
       <Container>

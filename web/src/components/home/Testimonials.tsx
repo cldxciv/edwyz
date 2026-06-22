@@ -1,16 +1,19 @@
 import { Star } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { testimonials } from "@/lib/data/testimonials";
+import { getPayloadClient } from "@/lib/payload";
 
-export function Testimonials() {
+export async function Testimonials() {
+  const payload = await getPayloadClient();
+  const { docs: testimonials } = await payload.find({ collection: "testimonials", limit: 6 });
+
   return (
     <section className="py-24">
       <Container>
         <SectionHeading eyebrow="Trusted By Industry Leaders" title="What our clients say" />
         <div className="mt-16 grid gap-6 lg:grid-cols-3">
           {testimonials.map((t) => (
-            <div key={t.author} className="flex flex-col rounded-2xl border border-border bg-surface p-6">
+            <div key={t.id} className="flex flex-col rounded-2xl border border-border bg-surface p-6">
               <div className="flex gap-1 text-neon-green">
                 {Array.from({ length: t.rating }).map((_, i) => (
                   <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
