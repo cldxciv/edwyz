@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --surface: #111111;
+  --surface-2: #161a22;
+  --foreground: #f5f7fa;
+  --muted: #9aa3b2;
+
+  --electric-blue: #2563ff;
+  --neon-cyan: #22e2f5;
+  --purple: #7c3aed;
+  --indigo: #4338ca;
+  --neon-green: #39ff8f;
+
+  --border: #1f2430;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
+  --color-electric: var(--electric-blue);
+  --color-cyan: var(--neon-cyan);
+  --color-purple: var(--purple);
+  --color-indigo: var(--indigo);
+  --color-neon-green: var(--neon-green);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+  --font-heading: var(--font-sora);
+  --font-alt: var(--font-outfit);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.gradient-text {
+  background-image: linear-gradient(90deg, var(--electric-blue), var(--neon-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: rgba(17, 17, 17, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-2);
+  border-radius: 8px;
+}
