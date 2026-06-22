@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Inter, Space_Grotesk, Sora, Outfit } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/lib/nav";
@@ -54,10 +55,13 @@ export default async function RootLayout({
     <html
       lang={locale}
       data-scroll-behavior="smooth"
+      suppressHydrationWarning
       className={`${inter.variable} ${spaceGrotesk.variable} ${sora.variable} ${outfit.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background text-foreground">
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
+          <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

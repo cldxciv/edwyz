@@ -94,7 +94,30 @@
     "eyebrow": "Servicio",
     "whatWeDeliver": "Lo que entregamos",
     "scheduleConsultation": "Agendar Consulta",
-    "backToAllServices": "Volver a Todos los Servicios"
+    "backToAllServices": "Volver a Todos los Servicios",
+    "processEyebrow": "Cómo Trabajamos",
+    "processTitle": "Un proceso probado, no una apuesta",
+    "process": {
+      "discover": {
+        "title": "Descubrir",
+        "description": "Empezamos por entender sus sistemas actuales, sus datos y sus objetivos — para que la solución se ajuste a su realidad, no a una plantilla genérica."
+      },
+      "design": {
+        "title": "Diseñar",
+        "description": "Diseñamos una arquitectura y una hoja de ruta adaptadas a sus restricciones, con hitos claros de los que puede exigirnos cuentas."
+      },
+      "build": {
+        "title": "Construir",
+        "description": "Nuestros ingenieros construyen e integran la solución en su stack existente, con puntos de control regulares para que no haya sorpresas."
+      },
+      "scale": {
+        "title": "Escalar",
+        "description": "Monitoreamos, iteramos y escalamos lo que funciona — y entregamos documentación y capacitación para que su equipo se haga cargo por completo."
+      }
+    },
+    "industriesWeServe": "Industrias a las que servimos",
+    "relatedServices": "Servicios relacionados",
+    "exploreCaseStudies": "Véalo en acción en nuestros casos de éxito"
   },
   "IndustriesPage": {
     "metaTitle": "Industrias",

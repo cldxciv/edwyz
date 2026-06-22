@@ -94,7 +94,30 @@
     "eyebrow": "Service",
     "whatWeDeliver": "What we deliver",
     "scheduleConsultation": "Schedule Consultation",
-    "backToAllServices": "Back to All Services"
+    "backToAllServices": "Back to All Services",
+    "processEyebrow": "How We Work",
+    "processTitle": "A proven process, not a guessing game",
+    "process": {
+      "discover": {
+        "title": "Discover",
+        "description": "We start by understanding your current systems, data, and goals — so the solution fits your reality, not a generic template."
+      },
+      "design": {
+        "title": "Design",
+        "description": "We design an architecture and roadmap tailored to your constraints, with clear milestones you can hold us to."
+      },
+      "build": {
+        "title": "Build",
+        "description": "Our engineers build and integrate the solution into your existing stack, with regular checkpoints so there are no surprises."
+      },
+      "scale": {
+        "title": "Scale",
+        "description": "We monitor, iterate, and scale what works — and hand off documentation and training so your team fully owns it."
+      }
+    },
+    "industriesWeServe": "Industries we serve",
+    "relatedServices": "Related services",
+    "exploreCaseStudies": "See it in action in our case studies"
   },
   "IndustriesPage": {
     "metaTitle": "Industries",

@@ -94,7 +94,30 @@
     "eyebrow": "Leistung",
     "whatWeDeliver": "Was wir liefern",
     "scheduleConsultation": "Beratung Vereinbaren",
-    "backToAllServices": "Zurück zu Allen Leistungen"
+    "backToAllServices": "Zurück zu Allen Leistungen",
+    "processEyebrow": "Wie Wir Arbeiten",
+    "processTitle": "Ein erprobter Prozess, kein Ratespiel",
+    "process": {
+      "discover": {
+        "title": "Entdecken",
+        "description": "Wir beginnen damit, Ihre bestehenden Systeme, Daten und Ziele zu verstehen — damit die Lösung zu Ihrer Realität passt, nicht zu einer generischen Vorlage."
+      },
+      "design": {
+        "title": "Entwerfen",
+        "description": "Wir entwerfen eine Architektur und eine Roadmap, die auf Ihre Rahmenbedingungen zugeschnitten ist, mit klaren Meilensteinen, an denen Sie uns messen können."
+      },
+      "build": {
+        "title": "Bauen",
+        "description": "Unsere Ingenieure bauen die Lösung und integrieren sie in Ihren bestehenden Stack, mit regelmäßigen Kontrollpunkten, damit es keine Überraschungen gibt."
+      },
+      "scale": {
+        "title": "Skalieren",
+        "description": "Wir überwachen, iterieren und skalieren, was funktioniert — und übergeben Dokumentation und Schulung, damit Ihr Team es vollständig übernimmt."
+      }
+    },
+    "industriesWeServe": "Branchen, die wir bedienen",
+    "relatedServices": "Verwandte Leistungen",
+    "exploreCaseStudies": "Erleben Sie es in unseren Fallstudien"
   },
   "IndustriesPage": {
     "metaTitle": "Branchen",

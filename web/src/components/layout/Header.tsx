@@ -2,13 +2,14 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { mainNav, siteConfig } from "@/lib/nav";
+import { mainNav } from "@/lib/nav";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
+import { Logo } from "@/components/layout/Logo";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -18,14 +19,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/70 backdrop-blur-xl">
       <Container className="flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center">
-          <Image
-            src="/img/logo-edwyz-light.png"
-            alt={siteConfig.name}
-            width={160}
-            height={51}
-            className="h-9 w-auto"
-            priority
-          />
+          <Logo className="h-9 w-auto" />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -41,19 +35,23 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-6 lg:flex">
+          <ThemeToggle />
           <LanguageSwitcher />
           <Button href="/contact" variant="primary">
             {t("scheduleConsultation")}
           </Button>
         </div>
 
-        <button
-          aria-label="Toggle menu"
-          className="text-foreground lg:hidden"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-4 lg:hidden">
+          <ThemeToggle />
+          <button
+            aria-label="Toggle menu"
+            className="text-foreground"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </Container>
 
       {open && (
