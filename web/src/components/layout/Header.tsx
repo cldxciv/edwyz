@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { mainNav, siteConfig } from "@/lib/nav";
 import { Button } from "@/components/ui/Button";
@@ -13,8 +14,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/70 backdrop-blur-xl">
       <Container className="flex h-16 items-center justify-between">
-        <Link href="/" className="font-display text-xl font-bold tracking-tight">
-          <span className="gradient-text">{siteConfig.name}</span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/img/logo-edwyz-light.png"
+            alt={siteConfig.name}
+            width={160}
+            height={51}
+            className="h-9 w-auto"
+            priority
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">

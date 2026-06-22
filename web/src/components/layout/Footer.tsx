@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { services } from "@/lib/data/services";
 import { siteConfig } from "@/lib/nav";
@@ -17,7 +18,13 @@ export function Footer() {
     <footer className="border-t border-border/60 bg-surface">
       <Container className="grid gap-10 py-16 lg:grid-cols-4">
         <div>
-          <span className="font-display text-xl font-bold gradient-text">{siteConfig.name}</span>
+          <Image
+            src="/img/logo-edwyz-light.png"
+            alt={siteConfig.name}
+            width={160}
+            height={51}
+            className="h-9 w-auto"
+          />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">{siteConfig.description}</p>
           <div className="mt-6 flex gap-4">
             {socials.map((s) => (

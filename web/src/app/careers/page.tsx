@@ -25,12 +25,12 @@ export default function CareersPage() {
                 <h3 className="font-heading text-base font-semibold text-foreground">{job.title}</h3>
                 <p className="mt-1 text-sm text-muted">{job.department} &middot; {job.location} &middot; {job.type}</p>
               </div>
-              <Button href={`/contact?role=${job.slug}`} variant="secondary">Apply</Button>
+              <Button href={`/careers/apply?role=${job.slug}`} variant="secondary">Apply</Button>
             </div>
           ))}
         </div>
         <p className="mt-8 text-center text-sm text-muted">
-          Don&apos;t see a fit? <a href="/contact" className="text-cyan hover:underline">Reach out anyway</a> — we&apos;re always looking for great people.
+          Don&apos;t see a fit? <a href="/careers/apply" className="text-cyan hover:underline">Apply anyway</a> — we&apos;re always looking for great people.
         </p>
       </Container>
     </div>

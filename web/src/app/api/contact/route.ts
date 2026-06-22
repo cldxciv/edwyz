@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { prisma } from "@/lib/db";
 
 type ContactPayload = {
   name?: string;
@@ -25,16 +26,17 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Please tell us about your requirements." }, { status: 400 });
   }
 
-  // Phase 2 will persist this to the leads table and trigger an email notification.
-  console.log("[contact] new lead:", {
-    name: body.name,
-    email: body.email,
-    company: body.company,
-    phone: body.phone,
-    budget: body.budget,
-    timeline: body.timeline,
-    requirements: body.requirements,
-    receivedAt: new Date().toISOString(),
+  await prisma.lead.create({
+    data: {
+      name: body.name.trim(),
+      email: body.email.trim(),
+      company: body.company?.trim() || null,
+      phone: body.phone?.trim() || null,
+      requirements: body.requirements.trim(),
+      budget: body.budget?.trim() || null,
+      timeline: body.timeline?.trim() || null,
+      source: "contact_form",
+    },
   });
 
   return NextResponse.json({ ok: true });
