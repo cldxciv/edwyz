@@ -124,13 +124,18 @@
     "metaDescription": "Industry-specific AI and software solutions from Edwyz.",
     "eyebrow": "Industries",
     "title": "Built for the industries that demand precision",
-    "description": "Deep domain expertise across the sectors that depend most on getting data and AI right."
+    "description": "Deep domain expertise across the sectors that depend most on getting data and AI right.",
+    "introTitle": "Why industry expertise matters",
+    "introBody": "Generic AI and software solutions break down on contact with the real constraints of a regulated, high-stakes, or operationally complex industry. We pair our engineering depth with domain expertise in each sector below — so what we build accounts for the compliance, data, and workflow realities you actually live with, not a textbook version of your industry."
   },
   "IndustryDetailPage": {
     "eyebrow": "Industry",
     "relatedCaseStudies": "Related case studies",
     "talkToOurTeam": "Talk to Our Team",
-    "backToAllIndustries": "Back to All Industries"
+    "backToAllIndustries": "Back to All Industries",
+    "challengesTitle": "Common challenges we solve",
+    "relatedServices": "Relevant services",
+    "scheduleConsultation": "Schedule Consultation"
   },
   "AboutPage": {
     "metaTitle": "About Us",

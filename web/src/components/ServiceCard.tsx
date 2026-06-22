@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { ArrowUpRight } from "lucide-react";
 import type { Service } from "@/lib/data/services";
+import { Icon } from "@/components/ui/Icon";
 
 export function ServiceCard({ service }: { service: Service }) {
   return (
@@ -10,7 +11,7 @@ export function ServiceCard({ service }: { service: Service }) {
     >
       <div className="flex items-center justify-between">
         <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-electric/20 to-cyan/10 text-cyan">
-          <span className="text-lg font-bold">{service.name.charAt(0)}</span>
+          <Icon id={service.icon} size={20} />
         </div>
         <ArrowUpRight
           size={18}

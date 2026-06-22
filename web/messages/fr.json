@@ -124,13 +124,18 @@
     "metaDescription": "Des solutions IA et logicielles spécifiques à chaque secteur, par Edwyz.",
     "eyebrow": "Secteurs",
     "title": "Conçu pour les secteurs qui exigent la précision",
-    "description": "Une expertise approfondie dans les secteurs qui dépendent le plus d'une bonne maîtrise des données et de l'IA."
+    "description": "Une expertise approfondie dans les secteurs qui dépendent le plus d'une bonne maîtrise des données et de l'IA.",
+    "introTitle": "Pourquoi l'expertise sectorielle compte",
+    "introBody": "Les solutions IA et logicielles génériques échouent face aux contraintes réelles d'un secteur réglementé, à enjeux élevés ou opérationnellement complexe. Nous associons notre expertise technique à une connaissance approfondie de chaque secteur ci-dessous — pour que ce que nous construisons tienne compte de la conformité, des données et des réalités opérationnelles que vous vivez réellement, et non d'une version théorique de votre secteur."
   },
   "IndustryDetailPage": {
     "eyebrow": "Secteur",
     "relatedCaseStudies": "Études de cas associées",
     "talkToOurTeam": "Parler à Notre Équipe",
-    "backToAllIndustries": "Retour à Tous les Secteurs"
+    "backToAllIndustries": "Retour à Tous les Secteurs",
+    "challengesTitle": "Défis courants que nous résolvons",
+    "relatedServices": "Services pertinents",
+    "scheduleConsultation": "Planifier une Consultation"
   },
   "AboutPage": {
     "metaTitle": "À propos de nous",

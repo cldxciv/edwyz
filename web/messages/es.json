@@ -124,13 +124,18 @@
     "metaDescription": "Soluciones de IA y software específicas para cada industria de Edwyz.",
     "eyebrow": "Industrias",
     "title": "Diseñado para las industrias que exigen precisión",
-    "description": "Experiencia profunda en los sectores que más dependen de hacer bien los datos y la IA."
+    "description": "Experiencia profunda en los sectores que más dependen de hacer bien los datos y la IA.",
+    "introTitle": "Por qué importa la experiencia sectorial",
+    "introBody": "Las soluciones genéricas de IA y software fallan al chocar con las restricciones reales de una industria regulada, de alto riesgo o con operaciones complejas. Combinamos nuestra profundidad de ingeniería con experiencia de dominio en cada sector a continuación — para que lo que construimos tenga en cuenta el cumplimiento, los datos y la realidad operativa que usted realmente vive, no una versión de manual de su industria."
   },
   "IndustryDetailPage": {
     "eyebrow": "Industria",
     "relatedCaseStudies": "Casos de éxito relacionados",
     "talkToOurTeam": "Hablar con Nuestro Equipo",
-    "backToAllIndustries": "Volver a Todas las Industrias"
+    "backToAllIndustries": "Volver a Todas las Industrias",
+    "challengesTitle": "Desafíos comunes que resolvemos",
+    "relatedServices": "Servicios relevantes",
+    "scheduleConsultation": "Agendar Consulta"
   },
   "AboutPage": {
     "metaTitle": "Sobre Nosotros",

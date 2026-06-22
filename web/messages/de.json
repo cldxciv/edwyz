@@ -124,13 +124,18 @@
     "metaDescription": "Branchenspezifische KI- und Softwarelösungen von Edwyz.",
     "eyebrow": "Branchen",
     "title": "Gebaut für Branchen, die Präzision erfordern",
-    "description": "Tiefes Fachwissen in den Branchen, die am meisten davon abhängen, Daten und KI richtig zu nutzen."
+    "description": "Tiefes Fachwissen in den Branchen, die am meisten davon abhängen, Daten und KI richtig zu nutzen.",
+    "introTitle": "Warum Branchenexpertise wichtig ist",
+    "introBody": "Generische KI- und Softwarelösungen scheitern an den realen Anforderungen einer regulierten, risikoreichen oder operativ komplexen Branche. Wir verbinden unsere technische Tiefe mit Fachwissen in jeder unten genannten Branche — damit das, was wir bauen, die Compliance-, Daten- und Workflow-Realitäten berücksichtigt, die Sie tatsächlich erleben, und nicht eine Lehrbuchversion Ihrer Branche."
   },
   "IndustryDetailPage": {
     "eyebrow": "Branche",
     "relatedCaseStudies": "Verwandte Fallstudien",
     "talkToOurTeam": "Mit Unserem Team Sprechen",
-    "backToAllIndustries": "Zurück zu Allen Branchen"
+    "backToAllIndustries": "Zurück zu Allen Branchen",
+    "challengesTitle": "Häufige Herausforderungen, die wir lösen",
+    "relatedServices": "Relevante Leistungen",
+    "scheduleConsultation": "Beratung Vereinbaren"
   },
   "AboutPage": {
     "metaTitle": "Über uns",

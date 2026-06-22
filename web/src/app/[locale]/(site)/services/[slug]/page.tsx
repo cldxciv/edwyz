@@ -8,6 +8,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { IndustryCard } from "@/components/IndustryCard";
 import { getServiceBySlug, getServiceSlugs, getServices } from "@/lib/data/services";
 import { getIndustries } from "@/lib/data/industries";
+import { Icon } from "@/components/ui/Icon";
 
 export function generateStaticParams() {
   return getServiceSlugs().map((slug) => ({ slug }));
@@ -50,7 +51,10 @@ export default async function ServiceDetailPage({
   return (
     <div className="py-24">
       <Container className="max-w-4xl">
-        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan">{t("eyebrow")}</span>
+        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-electric/20 to-cyan/10 text-cyan">
+          <Icon id={service.icon} size={26} />
+        </div>
+        <span className="mt-6 block text-xs font-semibold uppercase tracking-[0.2em] text-cyan">{t("eyebrow")}</span>
         <h1 className="mt-3 font-display text-4xl font-bold tracking-tight sm:text-5xl">{service.name}</h1>
         <p className="mt-5 text-xl font-medium text-foreground/90">{service.short}</p>
         <p className="mt-4 text-lg leading-relaxed text-muted">{service.description}</p>
