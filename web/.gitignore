@@ -52,3 +52,6 @@ next-env.d.ts
 # payload uploaded media
 /public/media
 /src/generated/payload-types.ts
+
+# agent run reports
+/ops/reports/

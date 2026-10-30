@@ -32,12 +32,12 @@
     "aboutSnippet": {
       "eyebrow": "Über Edwyz",
       "title": "Ein Team, das KI in echte Ergebnisse verwandeln will",
-      "description": "Wir sind ein globales Team aus Ingenieuren, Data Scientists und Produktentwicklern, das Unternehmen hilft, KI einzuführen, Infrastruktur zu modernisieren und bessere Software schneller auszuliefern.",
+      "description": "Edwyz ist ein KI-Beratungs- und Software-Engineering-Unternehmen mit Sitz in Shimla, Indien. Wir helfen Unternehmen, KI einzuführen, ihre Infrastruktur zu modernisieren und bessere Software schneller auszuliefern.",
       "stats": {
-        "projectsDelivered": "Abgeschlossene Projekte",
-        "clientsServed": "Betreute Kunden",
-        "countriesReached": "Erreichte Länder",
-        "teamMembers": "Teammitglieder"
+        "founded": "Gegründet",
+        "services": "Leistungen",
+        "industries": "Branchen",
+        "languages": "Website-Sprachen"
       }
     },
     "servicesGrid": {
@@ -63,8 +63,8 @@
       "description": "Tiefes Fachwissen in den Branchen, die am meisten davon abhängen, Daten und KI richtig zu nutzen."
     },
     "caseStudiesPreview": {
-      "eyebrow": "Beweise statt Versprechen",
-      "title": "Ergebnisse, die unsere Kunden messen können",
+      "eyebrow": "Fallstudien",
+      "title": "Ausgewählte Projekte",
       "readCaseStudy": "Fallstudie lesen",
       "viewAll": "Alle Fallstudien Ansehen"
     },
@@ -77,6 +77,40 @@
       "title": "Neuestes aus dem Edwyz-Blog",
       "readMore": "Weitere Artikel Lesen"
     },
+    "howWeWork": {
+      "eyebrow": "Unsere Arbeitsweise",
+      "title": "Von der Strategie zur Produktionsrealität",
+      "steps": {
+        "discover": {
+          "title": "Entdecken & Gestalten",
+          "description": "Wir kartieren Ihre Datenlandschaft und definieren die KI-Strategie — damit jede Entscheidung in Ihrer Realität verankert ist, nicht in einer generischen Vorlage."
+        },
+        "build": {
+          "title": "Bauen & Trainieren",
+          "description": "Ingenieure und Data Scientists liefern in fokussierten Sprints, iterieren schnell und halten Sie an jedem Meilenstein auf dem Laufenden."
+        },
+        "deploy": {
+          "title": "Deployen & Skalieren",
+          "description": "Wir starten, überwachen und wachsen das System gemeinsam mit Ihnen — vom funktionierenden Piloten bis zur vollen Enterprise-Produktion."
+        }
+      }
+    },
+    "workSamples": {
+      "eyebrow": "Von Unserem Schreibtisch",
+      "title": "Eine Auswahl unserer Arbeit",
+      "description": "Beispiele für Dashboards, KI-Plattformen und Cloud-Betrieb, die wir entwickeln. Das Cloud Operations Center ist eine interaktive Demo mit simulierten Daten.",
+      "tabs": {
+        "cloud1": "Cloud-Wartung",
+        "cloud2": "Cloud-Betrieb",
+        "llm": "LLM-Lösungen"
+      },
+      "presentation": {
+        "badge": "Unternehmensbroschüre",
+        "title": "Edwyz Kundenpräsentation",
+        "description": "Ein vollständiger Überblick über unsere Dienstleistungen, Vorgehensweise und Fallstudien. Herunterladen und mit Ihrem Team teilen.",
+        "download": "Präsentation Herunterladen"
+      }
+    },
     "contactCta": {
       "title": "Bereit für das nächste Projekt?",
       "description": "Erzählen Sie uns von Ihrem Projekt — wir melden uns innerhalb eines Werktags mit den nächsten Schritten.",
@@ -84,8 +118,8 @@
     }
   },
   "ServicesPage": {
-    "metaTitle": "Leistungen",
-    "metaDescription": "Entdecken Sie das gesamte Angebot von Edwyz an KI-, Software-, Daten- und Cloud-Engineering-Dienstleistungen.",
+    "metaTitle": "KI- und Software-Engineering-Leistungen",
+    "metaDescription": "KI-Beratung für Unternehmen, maschinelles Lernen, generative KI, Cloud-Migration, Data Engineering und individuelle Softwareentwicklung aus einer Hand.",
     "eyebrow": "Leistungen",
     "title": "Alles, was Sie zum Bauen, Skalieren und Modernisieren brauchen",
     "description": "Von der KI-Strategie bis zur Software im Produktivbetrieb deckt unser Team den gesamten Technologie-Stack ab."
@@ -117,11 +151,14 @@
     },
     "industriesWeServe": "Branchen, die wir bedienen",
     "relatedServices": "Verwandte Leistungen",
-    "exploreCaseStudies": "Erleben Sie es in unseren Fallstudien"
+    "exploreCaseStudies": "Erleben Sie es in unseren Fallstudien",
+    "relatedCaseStudies": "Passende Fallstudien",
+    "relatedGuide": "Lesen Sie unseren Leitfaden (auf Englisch)",
+    "mediaCaption": "Illustration: Ein Team prüft eine KI-Strategie-Roadmap."
   },
   "IndustriesPage": {
-    "metaTitle": "Branchen",
-    "metaDescription": "Branchenspezifische KI- und Softwarelösungen von Edwyz.",
+    "metaTitle": "KI- und Datenlösungen nach Branche",
+    "metaDescription": "KI-, Daten- und Software-Engineering für Gesundheit, Finanzen, Handel, Fertigung, Logistik und mehr. Entdecken Sie die Branchen, die Edwyz bedient.",
     "eyebrow": "Branchen",
     "title": "Gebaut für Branchen, die Präzision erfordern",
     "description": "Tiefes Fachwissen in den Branchen, die am meisten davon abhängen, Daten und KI richtig zu nutzen.",
@@ -138,8 +175,8 @@
     "scheduleConsultation": "Beratung Vereinbaren"
   },
   "AboutPage": {
-    "metaTitle": "Über uns",
-    "metaDescription": "Erfahren Sie mehr über die Geschichte, Vision, Mission und das Team von Edwyz, das die Zukunft von KI und Software gestaltet.",
+    "metaTitle": "Über Edwyz: KI- und Software-Engineering",
+    "metaDescription": "Erfahren Sie, wie Edwyz das Potenzial von KI für Unternehmen in die Produktion bringt: unsere Mission, unsere Werte und das Team hinter den Systemen.",
     "eyebrow": "Über Edwyz",
     "title": "Wir bauen die Technologie, die das Nächste antreibt",
     "intro": "Edwyz wurde gegründet, um die Lücke zwischen dem, was KI verspricht, und dem, was Unternehmen tatsächlich umsetzen können, zu schließen. Wir verbinden tiefes technisches Fachwissen in KI, Daten und Cloud-Engineering mit einem unnachgiebigen Fokus auf produktionsreife Lieferung — denn ein brillantes Modell, das nie zu den Nutzern gelangt, ist kein Ergebnis, sondern eine Demo.",
@@ -171,8 +208,8 @@
     "workWithUs": "Arbeiten Sie mit Uns"
   },
   "CareersPage": {
-    "metaTitle": "Karriere",
-    "metaDescription": "Werden Sie Teil von Edwyz und helfen Sie mit, die Zukunft von KI und Softwareentwicklung zu gestalten.",
+    "metaTitle": "Karriere bei Edwyz: KI- und Software-Jobs",
+    "metaDescription": "Werden Sie Teil von Edwyz. Entdecken Sie offene Stellen in Engineering, Daten und KI in einem Remote-Team, das intelligente Systeme für Kunden baut.",
     "eyebrow": "Karriere",
     "title": "Gestalten Sie mit uns die Zukunft der KI",
     "description": "Wir sind ein Remote-First-Team aus Ingenieuren, Wissenschaftlern und Produktentwicklern. Das suchen wir gerade.",
@@ -182,20 +219,20 @@
     "alwaysLooking": "wir suchen immer großartige Menschen."
   },
   "ApplyPage": {
-    "metaTitle": "Bewerben",
-    "metaDescription": "Bewerben Sie sich für das Edwyz-Team.",
+    "metaTitle": "Bewerben bei Edwyz: KI- und Software-Karriere",
+    "metaDescription": "Bewerben Sie sich bei Edwyz. Senden Sie uns Ihre Angaben für Engineering-, Daten- und KI-Rollen, und unser Team prüft Ihre Bewerbung zeitnah.",
     "eyebrow": "Karriere",
     "applyTitle": "Bewerben",
     "generalApplication": "Initiativbewerbung",
     "noRoleDescription": "Erzählen Sie uns, warum Sie gut zu Edwyz passen würden."
   },
   "ContactPage": {
-    "metaTitle": "Kontakt",
-    "metaDescription": "Kontaktieren Sie Edwyz, um über Ihr nächstes KI- oder Softwareprojekt zu sprechen.",
+    "metaTitle": "Kontakt zu unserem KI-Beratungsteam",
+    "metaDescription": "Sprechen Sie mit dem Edwyz-Team über KI-, Daten-, Cloud- oder Softwareprojekte. Schildern Sie Ihre Ziele und erhalten Sie binnen eines Werktags Antwort.",
     "eyebrow": "Kontakt",
     "title": "Lassen Sie uns gemeinsam etwas Großartiges bauen",
     "description": "Erzählen Sie uns von Ihrem Projekt — ein Mitglied unseres Teams meldet sich innerhalb eines Werktags.",
-    "remoteFirst": "Remote-first, mit Standorten in Nordamerika, Europa und Asien."
+    "remoteFirst": "Mit Sitz in Shimla, Indien."
   },
   "ContactForm": {
     "genericError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
@@ -217,7 +254,12 @@
     "timelineExploring": "Nur Informieren",
     "requirements": "Erzählen Sie uns von Ihren Projektanforderungen",
     "sending": "Wird gesendet...",
-    "sendMessage": "Nachricht Senden"
+    "sendMessage": "Nachricht Senden",
+    "moreDetail": "Weitere Angaben (optional)",
+    "notSure": "Noch unklar",
+    "privacyNote": "Wir verwenden Ihre Angaben nur, um Ihnen zu antworten.",
+    "privacyLink": "Datenschutzerklärung",
+    "bookCall": "Lieber direkt sprechen? Gespräch buchen"
   },
   "ApplicationForm": {
     "genericError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
@@ -232,8 +274,8 @@
     "submitApplication": "Bewerbung Senden"
   },
   "AiHubPage": {
-    "metaTitle": "KI-Innovationszentrum",
-    "metaDescription": "Edwyz' dediziertes Zentrum für KI-Innovation, angetrieben von Claude.",
+    "metaTitle": "KI-Innovationszentrum mit Claude",
+    "metaDescription": "Entdecken Sie das KI-Innovationszentrum von Edwyz, powered by Claude: Demos, Ideen und Experimente, um generative KI im Unternehmen einzusetzen.",
     "eyebrow": "KI-Innovationszentrum",
     "title": "Sprechen Sie mit unserem Claude-gestützten KI-Assistenten",
     "description": "Unser KI-Assistent ist mit den Leistungen, Fallstudien und dem Fachwissen von Edwyz trainiert, sodass er Fragen beantworten und Sie sofort zur richtigen Lösung führen kann. Klicken Sie auf die Chat-Blase unten rechts auf jeder Seite, um ein Gespräch zu starten — oder sprechen Sie direkt mit unserem Team.",
@@ -241,26 +283,34 @@
   },
   "PrivacyPage": {
     "metaTitle": "Datenschutzerklärung",
+    "metaDescription": "Datenschutzerklärung von Edwyz — wie wir personenbezogene Daten auf edwyz.com erheben, verwenden und schützen.",
     "title": "Datenschutzerklärung",
     "body": "Dies ist eine vorläufige Datenschutzerklärung. Der vollständige Inhalt zu Datenerhebung, Nutzung und Nutzerrechten wird vor dem Produktionsstart ergänzt."
   },
   "TermsPage": {
     "metaTitle": "Nutzungsbedingungen",
+    "metaDescription": "Lesen Sie die Nutzungsbedingungen von Edwyz zu Website-Nutzung, Beratungs- und Engineering-Leistungen, geistigem Eigentum und Haftung im Überblick.",
     "title": "Nutzungsbedingungen",
     "body": "Dies sind vorläufige Nutzungsbedingungen. Die vollständigen Bedingungen werden vor dem Produktionsstart ergänzt."
   },
   "BlogPage": {
-    "metaTitle": "Blog",
-    "metaDescription": "Einblicke in KI, Data Engineering und Software vom Edwyz-Team.",
+    "metaTitle": "KI- und Technologie-Blog: Einblicke von Edwyz",
+    "metaDescription": "Praxisnahe Beiträge der Edwyz-Ingenieure zu generativer KI, Agenten, Data Engineering und Cloud für Teams, die Systeme in Produktion bringen.",
     "eyebrow": "Einblicke",
-    "title": "Der Edwyz-Blog"
+    "title": "Der Edwyz-Blog",
+    "allPosts": "Alle Beiträge"
   },
   "BlogPostPage": {
-    "backToBlog": "Zurück zum Blog"
+    "backToBlog": "Zurück zum Blog",
+    "relatedArticles": "Verwandte Artikel",
+    "ctaTitle": "Vor dieser Entscheidung?",
+    "ctaBody": "Erzählen Sie uns, was Sie aufbauen, und wir antworten innerhalb eines Werktags.",
+    "ctaButton": "Sprechen Sie mit uns über {service}",
+    "ctaLink": "Unsere Leistung {service} ansehen"
   },
   "CaseStudiesPage": {
-    "metaTitle": "Fallstudien",
-    "metaDescription": "Echte Ergebnisse, die Edwyz für Kunden in verschiedenen Branchen erzielt hat.",
+    "metaTitle": "KI- und Daten-Fallstudien unserer Kunden",
+    "metaDescription": "Sehen Sie, wie Edwyz Unternehmen hilft, KI-, Daten- und Cloud-Projekte in Produktion zu bringen, mit realen, messbaren Ergebnissen für Kunden.",
     "eyebrow": "Fallstudien",
     "title": "Ergebnisse, die unsere Kunden messen können"
   },
@@ -269,6 +319,7 @@
     "theChallenge": "Die Herausforderung",
     "theSolution": "Die Lösung",
     "startSimilarProject": "Ähnliches Projekt Starten",
-    "backToCaseStudies": "Zurück zu den Fallstudien"
+    "backToCaseStudies": "Zurück zu den Fallstudien",
+    "moreCaseStudies": "Weitere Fallstudien"
   }
 }

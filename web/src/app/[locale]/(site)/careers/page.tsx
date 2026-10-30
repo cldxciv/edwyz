@@ -1,19 +1,23 @@
 import type { Metadata } from "next";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { Link } from "@/i18n/navigation";
 import { getPayloadClient } from "@/lib/payload";
+import { buildPageMetadata } from "@/lib/seo";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("CareersPage");
-  return { title: t("metaTitle"), description: t("metaDescription") };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "CareersPage" });
+  return buildPageMetadata(locale, "/careers", { title: t("metaTitle"), description: t("metaDescription") });
 }
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
-export default async function CareersPage() {
+export default async function CareersPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: routeLocale } = await params;
+  setRequestLocale(routeLocale);
   const t = await getTranslations("CareersPage");
   const locale = await getLocale();
   const payload = await getPayloadClient();
@@ -27,7 +31,7 @@ export default async function CareersPage() {
   return (
     <div className="py-24">
       <Container>
-        <SectionHeading eyebrow={t("eyebrow")} title={t("title")} description={t("description")} />
+        <SectionHeading as="h1" eyebrow={t("eyebrow")} title={t("title")} description={t("description")} />
         <div className="mx-auto mt-16 max-w-3xl divide-y divide-border rounded-2xl border border-border bg-surface">
           {jobListings.map((job) => (
             <div key={job.slug} className="flex items-center justify-between gap-4 p-6">

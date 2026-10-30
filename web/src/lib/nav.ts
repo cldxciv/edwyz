@@ -11,6 +11,7 @@ export const siteConfig = {
   name: "Edwyz",
   tagline: "Engineering the Future with AI, Data & Innovation",
   description:
-    "Edwyz is an AI, software, and data engineering company helping enterprises build intelligent, scalable digital products.",
+    "Edwyz is an AI consulting and software engineering company helping enterprises build intelligent, scalable systems — from generative AI and machine learning to cloud migration and data engineering.",
   url: "https://www.edwyz.com",
+  twitter: "@edwyzexcellence",
 };

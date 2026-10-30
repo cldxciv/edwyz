@@ -1,23 +1,29 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
+import { buildPageMetadata } from "@/lib/seo";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("AboutPage");
-  return { title: t("metaTitle"), description: t("metaDescription") };
+export const revalidate = 3600;
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "AboutPage" });
+  return buildPageMetadata(locale, "/about", { title: t("metaTitle"), description: t("metaDescription") });
 }
 
 const valueKeys = ["engineeringExcellence", "clientObsession", "responsibleAi", "continuousLearning"] as const;
 
-export default async function AboutPage() {
+export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: routeLocale } = await params;
+  setRequestLocale(routeLocale);
   const t = await getTranslations("AboutPage");
 
   return (
     <div className="py-24">
       <Container className="max-w-4xl">
-        <SectionHeading align="left" eyebrow={t("eyebrow")} title={t("title")} />
+        <SectionHeading as="h1" align="left" eyebrow={t("eyebrow")} title={t("title")} />
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">{t("intro")}</p>
 
         <div className="mt-16 grid gap-8 sm:grid-cols-2">

@@ -1,23 +1,29 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { IndustryCard } from "@/components/IndustryCard";
 import { getIndustries } from "@/lib/data/industries";
+import { buildPageMetadata } from "@/lib/seo";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("IndustriesPage");
-  return { title: t("metaTitle"), description: t("metaDescription") };
+export const revalidate = 3600;
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "IndustriesPage" });
+  return buildPageMetadata(locale, "/industries", { title: t("metaTitle"), description: t("metaDescription") });
 }
 
-export default async function IndustriesPage() {
+export default async function IndustriesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: routeLocale } = await params;
+  setRequestLocale(routeLocale);
   const t = await getTranslations("IndustriesPage");
   const industries = await getIndustries();
 
   return (
     <div className="py-24">
       <Container>
-        <SectionHeading eyebrow={t("eyebrow")} title={t("title")} description={t("description")} />
+        <SectionHeading as="h1" eyebrow={t("eyebrow")} title={t("title")} description={t("description")} />
 
         <div className="mx-auto mt-12 max-w-3xl rounded-2xl border border-border bg-surface p-8 text-center">
           <h2 className="font-heading text-lg font-semibold">{t("introTitle")}</h2>

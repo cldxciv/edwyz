@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ApplicationForm } from "@/components/ApplicationForm";
 import { getPayloadClient } from "@/lib/payload";
+import { buildPageMetadata } from "@/lib/seo";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("ApplyPage");
-  return { title: t("metaTitle"), description: t("metaDescription") };
+export const revalidate = 3600;
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "ApplyPage" });
+  return buildPageMetadata(locale, "/careers/apply", { title: t("metaTitle"), description: t("metaDescription") });
 }
 
 export default async function ApplyPage({
